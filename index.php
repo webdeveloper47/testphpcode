@@ -1,28 +1,15 @@
-<?php 
 
 
+<?php
 
 
-$condition1 = true;
-$condition2 = true;
-$condition3 = true;
+$tutionFee =22000;
+
+$tutionFee = (($tutionFee >20000)?("Comision 25% "):(($tutionFee>10000 && $tutionFee<20000)?("Comision 20%"):(($tutionFee>7000 && $tutionFee<10000)?("Comision 15%"):("The data will be invalid"))));
 
 
-if($condition1 && $condition2 && $condition3){
-    echo "Bangladesh is the beautiful country";
-}elseif($condition1 && $condition2){
-    echo "Condition Three is False";
-}elseif($condition1){
-    echo "Condition two is False";
-}else{
-    echo "Condition one is False";
-}
+echo $tutionFee;
 
 
-echo PHP_EOL;
+?>
 
-// Ternary Operator avobe of the code 
-
-$checkCondition = (($condition1 && $condition2 && $condition3)? "Bangladesh is the beautiful country": ($condition1 && $condition2))?"Condition Three is False": (($condition1)? "Condition two is False" : "Condition one is False");
-
-echo $checkCondition;
